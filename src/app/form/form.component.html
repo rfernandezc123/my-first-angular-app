@@ -1,0 +1,15 @@
+<div>
+    <!-- variables de platilla #name -->
+    <input type="text" name="name" placeholder="Ingresa tu nombre" class="form-control" #name />
+    <button class="btn btn-primary mt-3" (click)="showInConsole(name.value)">Mostrar en consola</button>
+
+    <!-- directiva ngIf de angular -->
+    <div class="alert alert-primary mt-3" role="alert" *ngIf="showAlert; else mensaje">
+        <p>El nombre ingresado es: {{name.value}}</p>
+        <button class="btn btn-danger" (click)="showAlert = false">X</button>
+    </div>
+
+    <ng-template #mensaje>
+        <p class="mt-3">Ingresa un nombre para mostrar en consola</p>
+    </ng-template>
+</div>

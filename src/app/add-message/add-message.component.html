@@ -1,0 +1,7 @@
+<form (ngSubmit)="addMessage()">
+    <div class="form-group">
+        <label for="my-input">Message:</label>
+        <input id="my-input" class="form-control" type="text" name="message" [(ngModel)]="message">
+    </div>
+    <button class="btn btn-primary" type="submit">Add</button>
+</form>

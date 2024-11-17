@@ -1,0 +1,8 @@
+<div>
+    <p>Lista de personas</p>
+    <ul>
+        <li *ngFor="let person of persons; let index = index">
+            {{index + 1}} - {{ person.name }} ({{ person.age }})
+        </li>
+    </ul>
+</div>
